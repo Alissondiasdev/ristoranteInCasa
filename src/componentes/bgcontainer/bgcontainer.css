@@ -1,0 +1,30 @@
+.header{
+    height: 5rem; /* 80px / 16 = 5rem */
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #92b10a 0%, #92b10a 33%, #ffffff 33%, #ffffff 66%, #b10a0c 66%, #b10a0c 100%);
+    align-items: center;
+}
+ .header-logo {
+    width: 10rem;
+  }
+
+  .menu-lateral {
+    width: 200px;
+    height: 100vh;
+    background-color: #ffffff;
+  }
+  .container-pedidos {
+    flex: 1;
+    height: 100%;
+    background-color: #f1f1f1;
+    
+
+  }
+  .container-menulateral-conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }

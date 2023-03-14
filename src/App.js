@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Bgcontainer from './componentes/bgcontainer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Cadastrocliente from './componentes/cadastrocliente';
+import Cadastroproduto from './componentes/cadastroproduto';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<Bgcontainer/>}/>
+            <Route path='/cadastro/cliente' element={<Cadastrocliente/>}/>
+            <Route path='/cadastro/produto' element={<Cadastroproduto/>}/>
+            
+
+        </Routes>
+        </BrowserRouter>
+      
     </div>
   );
 }
