@@ -1,4 +1,8 @@
 import Bgcontainer from "../bgcontainer";
+import Editar from '../../assets/botao-editar.png'
+import Excluir from '../../assets/excluir.png'
+import Text from '../modal/index'
+import './cadastroproduto.css'
 import { initializeApp } from "firebase/app";
 import { collection, getFirestore, getDocs, addDoc } from "firebase/firestore";
 import { useState, useEffect } from "react";
@@ -50,57 +54,34 @@ function Cadastroproduto() {
 
     return (
       <Bgcontainer>
-      <form onSubmit={handleSubmit} className="cadastro-form">
+      
       <h2 className="form-title">Cadastro de Produto</h2>
-      <div className="form-row">
-        <div className="form-group col-md-6">
-          <label htmlFor="nome">Descrição</label>
-          <input
-          value={descricao} onChange={(event) => setDescricao(event.target.value)}
-            id="Descricao"
-            type="text"
-            className="form-control"
-            
-            required
-          />
-        </div>
-        <div className="form-group col-md-6">
-          <label htmlFor="email">Valor</label>
-          <input
-          value={valor} onChange={(event) => setValor(event.target.value)}
-            id="valor"
-            type="number"
-            className="form-control"
-            
-            required
-          />
-        </div>
-
-        <div className="form-group col-md-6">
-          <label htmlFor="email">Imagem</label>
-          <input
-            id="imagem"
-            type="file"
-            className="form-control"
-            
-          
-          />
-        </div>
+      <div className="controletabela">
+      <Text/>
+        <input className="tabelainput" type='text' placeholder="Pesquisar produto"/>
       </div>
+      <table className="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <th>pizza</th>
+            <th><img className="tabela-icone" src={Editar} alt='icone para editar'/><img className="tabela-icone" src={Excluir} alt='icone para excluir'/></th>
+          </tr>
+          <tr>
+            <th>1</th>
+            <th>pizza</th>
+            <th></th>
+          </tr>
+        </tbody>
+      </table>
       
-      
-      
-      <>
-    
-  </>
-  
-  <div className="form-row">
-        <div className="form-group col-md-6">
-          <button type="submit" className="btn btn-primary">Cadastrar</button>
-        </div>
-      </div>
-  
-    </form>
       </Bgcontainer>
     );
   }

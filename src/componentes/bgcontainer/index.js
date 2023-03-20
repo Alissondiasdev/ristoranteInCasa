@@ -1,10 +1,11 @@
 import '../bgcontainer/bgcontainer.css'
-import logo from '../../assets/logo.jpg'
+import logo from '../../assets/logo.png'
 
 
 
 import Cadastrocliente from '../cadastrocliente';
 import { Switch, Route, Link } from 'react-router-dom';
+import Teste from '../modal';
 
 
 
@@ -42,8 +43,12 @@ const Bgcontainer = (props) => {
                 </section>
                 <section id="containerdepedido" className="container-pedidos">
                     <h1>Em Desenvolvimento</h1>
-
+                    <div className='teste'>
                     {props.children}
+                   
+
+                    </div>
+
 
 
 
