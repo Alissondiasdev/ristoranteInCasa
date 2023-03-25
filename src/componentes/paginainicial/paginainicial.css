@@ -1,0 +1,11 @@
+.header{
+    background: linear-gradient(to right, #92b10a 0%, #92b10a 33%, #ffffff 33%, #ffffff 66%, #b10a0c 66%, #b10a0c 100%);
+}
+.logo{
+    width: 110px;
+    
+}
+.divlogo{
+    display: flex;
+    justify-content: center;
+}

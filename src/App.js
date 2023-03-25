@@ -1,21 +1,35 @@
 
-import Bgcontainer from './componentes/bgcontainer';
+
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Cadastrocliente from './componentes/cadastrocliente';
 import Cadastroproduto from './componentes/cadastroproduto';
+import Cardes from './componentes/card';
+import PaginaInicial from './componentes/paginainicial';
+
+
+
+
 
 function App() {
   return (
     <div className="App">
        <BrowserRouter>
+       
         <Routes>
-            <Route path='/' element={<Bgcontainer/>}/>
-            <Route path='/cadastro/cliente' element={<Cadastrocliente/>}/>
-            <Route path='/cadastro/produto' element={<Cadastroproduto/>}/>
+         <Route path='/' element={<PaginaInicial/>}/>
+         <Route path='/cadastroproduto' element={<Cadastroproduto/>}/>
+         <Route path='/card' element={<Cardes/>}/>
+         
+         
+        
+           
+            
             
 
         </Routes>
         </BrowserRouter>
+        
+        
       
     </div>
   );

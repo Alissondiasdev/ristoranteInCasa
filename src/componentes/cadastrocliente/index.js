@@ -1,4 +1,4 @@
-import Bgcontainer from "../bgcontainer";
+
 import  '../cadastrocliente/cadastrocliente.css'
 import { useState, useEffect } from "react";
 
@@ -61,7 +61,7 @@ function Cadastrocliente() {
 
 
     return (
-      <Bgcontainer>
+      
       <form onSubmit={handleSubmit} className="cadastro-form">
       <h2 className="form-title">Cadastro de Cliente</h2>
       <div className="form-row">
@@ -157,7 +157,7 @@ function Cadastrocliente() {
     </form>
   
 
-      </Bgcontainer>
+      
     );
   }
   
